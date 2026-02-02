@@ -1,0 +1,54 @@
+name: "Google服务定向-精准修复"
+desc: "匹配 🇺🇸 United States 节点"
+
+proxy-groups:
+  - name: "Google-US"
+    type: select
+    proxies:
+      - "🇺🇸 United States 04"  # 直接写死名字
+      - "🇺🇸 United States 01"  # 直接写死名字
+      - "🇺🇸 United States 02"  # 直接写死名字
+      - "🇺🇸 United States 03"  # 直接写死名字
+      - "🇺🇸 United States 05"  # 直接写死名字
+
+rules:
+  # 将 Google 规则插入到最前面
+  # === Google 全家桶 (AI/编程/系统框架) ===
+  # AI 相关
+  - DOMAIN-SUFFIX,gemini.google.com,Google-US
+  - DOMAIN-SUFFIX,bard.google.com,Google-US
+  - DOMAIN-SUFFIX,aistudio.google.com,Google-US
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,Google-US
+  - DOMAIN-SUFFIX,deepmind.com,Google-US
+  - DOMAIN-KEYWORD,banana,Google-US
+
+  # 编程与开发
+  - DOMAIN-SUFFIX,golang.org,Google-US
+  - DOMAIN-SUFFIX,flutter.dev,Google-US
+  - DOMAIN-SUFFIX,dart.dev,Google-US
+  - DOMAIN-SUFFIX,googlesource.com,Google-US
+  - DOMAIN-SUFFIX,firebaseio.com,Google-US
+  - DOMAIN-SUFFIX,android.com,Google-US
+  - DOMAIN-SUFFIX,developers.google.com,Google-US
+  - DOMAIN-SUFFIX,tensorflow.org,Google-US
+  - DOMAIN-SUFFIX,cloudfunctions.net,Google-US
+  - DOMAIN-SUFFIX,googlecloud.com,Google-US
+  - DOMAIN-SUFFIX,devsiteproxy.googlezip.net,Google-US
+
+  # 核心服务与 GMS
+  - DOMAIN-SUFFIX,google.com,Google-US
+  - DOMAIN-SUFFIX,googleapis.com,Google-US
+  - DOMAIN-SUFFIX,gstatic.com,Google-US
+  - DOMAIN-SUFFIX,googleusercontent.com,Google-US
+  - DOMAIN-SUFFIX,googlevideo.com,Google-US
+  - DOMAIN-SUFFIX,gvt1.com,Google-US
+  - DOMAIN-SUFFIX,gvt2.com,Google-US
+  - DOMAIN-SUFFIX,1e100.net,Google-US
+
+  # YouTube与Gmail
+  - DOMAIN-SUFFIX,youtube.com,Google-US
+  - DOMAIN-SUFFIX,ytimg.com,Google-US
+  - DOMAIN-SUFFIX,gmail.com,Google-US
+  - DOMAIN-SUFFIX,ggpht.com,Google-US
+  - DOMAIN-KEYWORD,google,Google-US
+  - DOMAIN-KEYWORD,youtube,Google-US
